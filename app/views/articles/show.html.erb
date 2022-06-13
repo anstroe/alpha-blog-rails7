@@ -3,7 +3,7 @@
   <h2 class="text-center mt-4"><%= @article.title %></h2>
   <div class="card text-center shadow mt-4">
     <div class="card-header fst-italic">
-      by Anne Ströhlein
+      by <%= @article.user.username %>
     </div>
     <div class="card-body">
       <div class="card-text text-start"><%= simple_format(@article.description) %></div>
