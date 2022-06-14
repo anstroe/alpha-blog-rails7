@@ -6,8 +6,18 @@
     <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-secondary" %>
   </div>
   <h3 class="text-center mt-4">Articles</h3>
+  <div class="row justify-content-md-center">
+    <div class="apple_pagination col-6">
+      <%= will_paginate @articles, container: false %>
+    </div>
+  </div>
   <%= render 'articles/article' %>
-  <div class="text-center mt-4">
+    <div class="row justify-content-md-center">
+    <div class="apple_pagination col-6 mt-4">
+      <%= will_paginate @articles, container: false %>
+    </div>
+  </div>
+  <div class="text-center mt-4 mb-4">
     <%= link_to '[ Return to articles listing ]', articles_path, class: "link-light" %>
   </div>
 </div>

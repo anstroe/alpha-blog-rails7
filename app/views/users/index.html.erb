@@ -1,5 +1,10 @@
 <div class="container mb-4">
   <h1 class="text-center mt-4">ALPHABLOGgers</h1>
+  <div class="row justify-content-md-center">
+    <div class="apple_pagination col-6">
+      <%= will_paginate @users, container: false %>
+    </div>
+  </div>
   <% @users.each do |user| %>
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
@@ -20,4 +25,9 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="row justify-content-md-center">
+  <div class="apple_pagination col-6 mb-4">
+    <%= will_paginate @users, container: false %>
+  </div>
 </div>
